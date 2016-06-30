@@ -131,9 +131,12 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IntakeController.cs" />
+    <Compile Include="Controllers\ProgramController.cs" />
     <Compile Include="Controllers\TAnswerController.cs" />
     <Compile Include="Controllers\TemplateController.cs" />
     <Compile Include="Controllers\TQuestionController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -201,6 +204,21 @@
     <Content Include="Views\TAnswer\Details.cshtml" />
     <Content Include="Views\TAnswer\Edit.cshtml" />
     <Content Include="Views\TAnswer\Index.cshtml" />
+    <Content Include="Views\User\Create.cshtml" />
+    <Content Include="Views\User\Delete.cshtml" />
+    <Content Include="Views\User\Details.cshtml" />
+    <Content Include="Views\User\Edit.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\Program\Create.cshtml" />
+    <Content Include="Views\Program\Delete.cshtml" />
+    <Content Include="Views\Program\Details.cshtml" />
+    <Content Include="Views\Program\Edit.cshtml" />
+    <Content Include="Views\Program\Index.cshtml" />
+    <Content Include="Views\Intake\Create.cshtml" />
+    <Content Include="Views\Intake\Delete.cshtml" />
+    <Content Include="Views\Intake\Details.cshtml" />
+    <Content Include="Views\Intake\Edit.cshtml" />
+    <Content Include="Views\Intake\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
