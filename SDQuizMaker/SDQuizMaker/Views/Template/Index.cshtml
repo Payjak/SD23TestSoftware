@@ -8,7 +8,7 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New Template", "Create")
 </p>
 <table class="table">
     <tr>
@@ -26,7 +26,8 @@
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.TemplateID }) |
             @Html.ActionLink("Details", "Details", new { id=item.TemplateID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.TemplateID })
+            @Html.ActionLink("Delete", "Delete", new { id=item.TemplateID }) |
+            @Html.ActionLink("Use Template", "Index", "TQuestion", new { id=item.TemplateID },null) 
         </td>
     </tr>
 }

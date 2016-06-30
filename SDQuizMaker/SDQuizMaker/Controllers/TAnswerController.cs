@@ -17,8 +17,9 @@ namespace SDQuizMaker.Controllers
         // GET: TAnswer
         public ActionResult Index()
         {
+            var chooseanswerid = (string)HttpContext.Request.RequestContext.RouteData.Values["id"];
             var tbtanswers = db.tbtanswers.Include(t => t.tbtquestion);
-            return View(tbtanswers.ToList());
+            return View(tbtanswers.ToList().Where(a => a.TQuestionID == Convert.ToInt32(chooseanswerid)));
         }
 
         // GET: TAnswer/Details/5

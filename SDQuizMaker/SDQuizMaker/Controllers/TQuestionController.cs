@@ -17,8 +17,9 @@ namespace SDQuizMaker.Controllers
         // GET: TQuestion
         public ActionResult Index()
         {
+            var choosetemplateid = (string)HttpContext.Request.RequestContext.RouteData.Values["id"];
             var tbtquestions = db.tbtquestions.Include(t => t.tbtemplate);
-            return View(tbtquestions.ToList());
+            return View(tbtquestions.ToList().Where(q => q.TemplateID == Convert.ToInt32(choosetemplateid)));
         }
 
         // GET: TQuestion/Details/5
