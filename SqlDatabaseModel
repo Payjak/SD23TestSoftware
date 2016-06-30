@@ -75,7 +75,7 @@ AccessLevel varchar(10)
 )
 go
 insert into tbuser(UserID,Email,Password,AccessLevel) values
-('RP124512','robert.payjack@robertsoncollege.net','payjak','student')
+('RP0000','robert@robertsoncollege.net','robert','student')
 go
 create table tbinstance
 (
