@@ -131,12 +131,14 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\TAnswerController.cs" />
     <Compile Include="Controllers\TemplateController.cs" />
     <Compile Include="Controllers\TQuestionController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Login.cs" />
     <Compile Include="Models\Model1.cs" />
     <Compile Include="Models\tbianswer.cs" />
     <Compile Include="Models\tbinstance.cs" />
@@ -201,6 +203,7 @@
     <Content Include="Views\TAnswer\Details.cshtml" />
     <Content Include="Views\TAnswer\Edit.cshtml" />
     <Content Include="Views\TAnswer\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,35 @@
+﻿@model SDQuizMaker.Models.Login
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Login Page</h2>
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.Raw(TempData["msg"])
+        <table>
+            <tr>
+                <td>
+                    @Html.Label("Email")
+                </td>
+                <td>
+                    @Html.TextBoxFor(m => m.Email, new { @required = "required" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.Label("Password")
+                </td>
+                <td>
+                    @Html.PasswordFor(m => m.Password, new { @required = "required" })
+                </td>
+            </tr>
+        </table>
+    </div>
+    <input type="submit" value="Login" />
+}
+
