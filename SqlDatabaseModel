@@ -1,0 +1,119 @@
+use master;
+go
+drop database dbas4;
+go
+create database dbas4;
+go
+use dbas4;
+go
+create table tbtemplate
+(
+TemplateID int identity(1,1) primary key,
+Name varchar(max)
+)
+go
+insert into tbtemplate (name) values
+('quiz1')
+go
+create table tbtquestions
+(
+TQuestionID int identity(1,1) primary key,
+TemplateID int foreign key references tbtemplate(TemplateID),
+Question varchar(max),
+Explanation varchar(max)
+)
+go
+insert into tbtquestions(TemplateID,Question,Explanation) values
+(1,'What is does SQL stand for?','It is a Database Language')
+create table tbtanswers
+(
+TAnswerID int identity(1,1) primary key,
+Text varchar(max),
+Correct bit,
+TQuestionID int foreign key references tbtquestions(TQuestionID)
+)
+go
+insert into tbtanswers(Text,Correct,TQuestionID) values
+('Structured Query Language',1,1),
+('Santa Queen Laura',0,1)
+go
+create procedure sptemplate
+as begin
+select Name,Question,Explanation,TAnswerID,Text,Correct
+from tbtemplate
+inner join tbtquestions on tbtemplate.TemplateID = tbtemplate.TemplateID
+inner join tbtanswers on tbtquestions.TQuestionID = tbtanswers.TQuestionID
+end 
+go
+--exec sptemplate
+create table tbprograms
+(
+ProgramID int identity(1,1) primary key,
+Name varchar(50)
+)
+go
+insert into tbprograms (Name) values
+('Software & Database Development'),
+('Health Unit Clerk')
+go
+create table tbintake
+(
+ClassID varchar(20) primary key,
+ProgramID int foreign key references tbprograms(ProgramID)
+)
+go
+insert into tbintake(ClassID,ProgramID) values
+('SD23',1),
+('HUC90',2)
+go
+create table tbuser
+(
+UserID varchar(10) primary key,
+Email varchar(80) unique,
+Password varchar(50),
+AccessLevel varchar(10)
+)
+go
+insert into tbuser(UserID,Email,Password,AccessLevel) values
+('RP124512','robert.payjack@robertsoncollege.net','payjak','student')
+go
+create table tbinstance
+(
+InstanceID int identity(1,1) primary key,
+StartTime time,
+EndTime time,
+UserID varchar(10) foreign key references tbuser(UserID),
+ClassID varchar(20) foreign key references tbintake(ClassID)
+)
+go
+create table tbiquestions
+(
+IQuestionID int identity(1,1) primary key,
+Question varchar(max),
+Explanation varchar(max),
+InstanceID int foreign key references tbinstance(InstanceID)
+)
+go
+create table tbianswers
+(
+IAnswerID int identity(1,1) primary key,
+Text varchar(max),
+Correct bit,
+IQuestionID int foreign key references tbiquestions(IQuestionID)
+)
+go
+create table tbresponse
+(
+ResponseID int identity(1,1) primary key,
+Score decimal,
+UserID varchar(10) foreign key references tbuser(UserID),
+InstanceID int foreign key references tbinstance(InstanceID)
+)
+go
+create table tbresponsedetail
+(
+DetailID int identity(1,1) primary key,
+ResponseID int foreign key references tbresponse(ResponseID),
+IAnswerID int foreign key references tbianswers(IAnswerID)
+)
+go
