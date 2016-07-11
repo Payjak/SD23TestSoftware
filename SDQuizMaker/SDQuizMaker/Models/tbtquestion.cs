@@ -15,9 +15,8 @@ namespace SDQuizMaker.Models
         }
 
         [Key]
-        [Required]
         public int TQuestionID { get; set; }
-        [Required]
+
         public int? TemplateID { get; set; }
 
         public string Question { get; set; }
