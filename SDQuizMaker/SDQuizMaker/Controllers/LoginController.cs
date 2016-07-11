@@ -30,21 +30,21 @@ namespace SDQuizMaker.Controllers
             {
                 TempData["msg"] = "<script>alert('Wrong email or password');</script>";
             }
-            else if (us.AccessLevel == "student")
+            else if (us.AccessLevel == "Student")
             {
                 Session["Email"] = us.Email;
                 Session["AccessLevel"] = us.AccessLevel;
                 Session["UserID"] = us.UserID;
                 return RedirectToAction("Index", "Home");
             }
-            else if (us.AccessLevel == "mentor")
+            else if (us.AccessLevel == "Mentor")
             {
                 Session["Email"] = us.Email;
                 Session["AccessLevel"] = us.AccessLevel;
                 Session["UserID"] = us.UserID;
                 return RedirectToAction("Index", "Home");
             }
-            else if (us.AccessLevel == "admin")
+            else if (us.AccessLevel == "Admin")
             {
                 Session["Email"] = us.Email;
                 Session["AccessLevel"] = us.AccessLevel;
