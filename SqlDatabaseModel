@@ -23,8 +23,6 @@ Question varchar(max),
 Explanation varchar(max)
 )
 go
-insert into tbtquestions(TemplateID,Question,Explanation) values
-(1,'What is does SQL stand for?','It is a Database Language')
 create table tbtanswers
 (
 TAnswerID int identity(1,1) primary key,
@@ -32,10 +30,6 @@ Text varchar(max),
 Correct bit,
 TQuestionID int foreign key references tbtquestions(TQuestionID)
 )
-go
-insert into tbtanswers(Text,Correct,TQuestionID) values
-('Structured Query Language',1,1),
-('Santa Queen Laura',0,1)
 go
 create procedure sptemplate
 as begin
@@ -51,10 +45,6 @@ create table tbprograms
 ProgramID int identity(1,1) primary key,
 Name varchar(50)
 )
-go
-insert into tbprograms (Name) values
-('Software & Database Development'),
-('Health Unit Clerk')
 go
 create table tbintake
 (
@@ -73,9 +63,6 @@ Email varchar(80) unique,
 Password varchar(50),
 AccessLevel varchar(10)
 )
-go
-insert into tbuser(UserID,Email,Password,AccessLevel) values
-('RP0000','robert@robertsoncollege.net','robert','student')
 go
 create table tbinstance
 (
