@@ -39,6 +39,7 @@ C:\Users\Rob P\Source\Repos\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\System.
 C:\Users\Rob P\Source\Repos\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\System.Web.WebPages.Razor.xml
 C:\Users\Rob P\Source\Repos\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\Antlr3.Runtime.pdb
 C:\Users\Rob P\Source\Repos\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\Newtonsoft.Json.xml
+C:\Users\Rob P\Source\Repos\SD23TestSoftware\SDQuizMaker\SDQuizMaker\obj\Debug\SDQuizMaker.csprojResolveAssemblyReference.cache
 C:\Users\Rob P\Source\Repos\SD23TestSoftware\SDQuizMaker\SDQuizMaker\obj\Debug\SDQuizMaker.dll
 C:\Users\Rob P\Source\Repos\SD23TestSoftware\SDQuizMaker\SDQuizMaker\obj\Debug\SDQuizMaker.pdb
 C:\Users\joshua janolo\Documents\GitHub\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\roslyn\csc.exe
@@ -85,4 +86,47 @@ C:\Users\joshua janolo\Documents\GitHub\SD23TestSoftware\SDQuizMaker\SDQuizMaker
 C:\Users\joshua janolo\Documents\GitHub\SD23TestSoftware\SDQuizMaker\SDQuizMaker\obj\Debug\SDQuizMaker.csprojResolveAssemblyReference.cache
 C:\Users\joshua janolo\Documents\GitHub\SD23TestSoftware\SDQuizMaker\SDQuizMaker\obj\Debug\SDQuizMaker.dll
 C:\Users\joshua janolo\Documents\GitHub\SD23TestSoftware\SDQuizMaker\SDQuizMaker\obj\Debug\SDQuizMaker.pdb
-C:\Users\Rob P\Source\Repos\SD23TestSoftware\SDQuizMaker\SDQuizMaker\obj\Debug\SDQuizMaker.csprojResolveAssemblyReference.cache
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\roslyn\csc.exe
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\roslyn\vbc.exe
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\roslyn\VBCSCompiler.exe
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\SDQuizMaker.dll.config
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\SDQuizMaker.dll
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\SDQuizMaker.pdb
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\Antlr3.Runtime.dll
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\EntityFramework.dll
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\EntityFramework.SqlServer.dll
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\Newtonsoft.Json.dll
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\System.Web.Helpers.dll
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\System.Web.Mvc.dll
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\System.Web.Optimization.dll
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\System.Web.Razor.dll
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\System.Web.WebPages.Deployment.dll
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\System.Web.WebPages.dll
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\System.Web.WebPages.Razor.dll
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\WebGrease.dll
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\EntityFramework.xml
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\EntityFramework.SqlServer.xml
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\System.Web.Helpers.xml
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\System.Web.Mvc.xml
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\System.Web.Optimization.xml
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\System.Web.Razor.xml
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\System.Web.WebPages.xml
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\System.Web.WebPages.Deployment.xml
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\System.Web.WebPages.Razor.xml
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\Antlr3.Runtime.pdb
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\Newtonsoft.Json.xml
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\obj\Debug\SDQuizMaker.csprojResolveAssemblyReference.cache
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\obj\Debug\SDQuizMaker.dll
+C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\obj\Debug\SDQuizMaker.pdb
