@@ -1,34 +1,39 @@
 ﻿@model IEnumerable<SDQuizMaker.Models.tbintake>
 
-@{
+    @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
-}
+    }
 
-<h2>Index</h2>
+    <h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.tbprogram.Name)
-        </th>
-        <th></th>
-    </tr>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                Intake
+            </th>
+            <th>
+                Program
+            </th>
+        </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.tbprogram.Name)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ClassID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ClassID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ClassID })
-        </td>
-    </tr>
-}
+        @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClassID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tbprogram.Name)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.ClassID }) |
+                @Html.ActionLink("Details", "Details", new { id=item.ClassID }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.ClassID })
+            </td>
+        </tr>
+        }
 
-</table>
+    </table>
