@@ -21,7 +21,6 @@ namespace SDQuizMaker.Models
         public string UserID { get; set; }
 
         [StringLength(80)]
-        [RegularExpression (@"[a-z0-9]+[_a-z0-9\.-]*[a-z0-9]+@robertsoncollege+(\.net+)", ErrorMessage ="Thats not a Robertson email")]
         public string Email { get; set; }
 
         [StringLength(50)]
