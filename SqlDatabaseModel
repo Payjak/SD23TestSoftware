@@ -1,10 +1,10 @@
 use master;
 go
-drop database dbQuizMaker;
+drop database dbSDQuizMaker;
 go
-create database dbQuizMaker;
+create database dbSDQuizMaker;
 go
-use dbQuizMaker;
+use dbSDQuizMaker;
 go
 create table tbtemplate
 (
@@ -18,18 +18,25 @@ go
 create table tbtquestions
 (
 TQuestionID int identity(1,1) primary key,
-TemplateID int foreign key references tbtemplate(TemplateID),
+TemplateID int NOT NULL REFERENCES tbtemplate ON DELETE CASCADE,
 Question varchar(max),
 Explanation varchar(max)
+
 )
 go
+insert into tbtquestions(TemplateID,Question,Explanation) values
+(1,'What is does SQL stand for?','It is a Database Language')
 create table tbtanswers
 (
 TAnswerID int identity(1,1) primary key,
 Text varchar(max),
 Correct bit,
-TQuestionID int foreign key references tbtquestions(TQuestionID)
+TQuestionID int NOT NULL REFERENCES tbtquestions ON DELETE CASCADE
 )
+go
+insert into tbtanswers(Text,Correct,TQuestionID) values
+('Structured Query Language',1,1),
+('Santa Queen Laura',0,1)
 go
 create procedure sptemplate
 as begin
@@ -45,6 +52,10 @@ create table tbprograms
 ProgramID int identity(1,1) primary key,
 Name varchar(50)
 )
+go
+insert into tbprograms (Name) values
+('Software & Database Development'),
+('Health Unit Clerk')
 go
 create table tbintake
 (
@@ -63,6 +74,9 @@ Email varchar(80) unique,
 Password varchar(50),
 AccessLevel varchar(10)
 )
+go
+insert into tbuser(UserID,Email,Password,AccessLevel) values
+('RP124512','robert@robertsoncollege.net','user','Admin')
 go
 create table tbinstance
 (
