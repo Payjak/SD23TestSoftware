@@ -17,12 +17,18 @@ namespace SDQuizMaker.Controllers
         // GET: User
         public ActionResult Index()
         {
+            if ((string)Session["Accesslevel"] != "Admin")
+            { return RedirectToAction("Index", "Home"); }
+            var amntofusers = db.tbusers.ToList().Count();
+            Session["amntofusers"] = amntofusers + 1;
             return View(db.tbusers.ToList());
         }
 
         // GET: User/Details/5
         public ActionResult Details(string id)
         {
+            if ((string)Session["Accesslevel"] != "Admin")
+            { return RedirectToAction("Index", "Home"); }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -38,6 +44,8 @@ namespace SDQuizMaker.Controllers
         // GET: User/Create
         public ActionResult Create()
         {
+            if ((string)Session["Accesslevel"] != "Admin")
+            { return RedirectToAction("Index", "Home"); }
             return View();
         }
 
@@ -48,6 +56,8 @@ namespace SDQuizMaker.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "UserID,Email,Password,AccessLevel")] tbuser tbuser)
         {
+            if ((string)Session["Accesslevel"] != "Admin")
+            { return RedirectToAction("Index", "Home"); }
             if (ModelState.IsValid)
             {
                 db.tbusers.Add(tbuser);
@@ -61,6 +71,8 @@ namespace SDQuizMaker.Controllers
         // GET: User/Edit/5
         public ActionResult Edit(string id)
         {
+            if ((string)Session["Accesslevel"] != "Admin")
+            { return RedirectToAction("Index", "Home"); }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -80,6 +92,8 @@ namespace SDQuizMaker.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "UserID,Email,Password,AccessLevel")] tbuser tbuser)
         {
+            if ((string)Session["Accesslevel"] != "Admin")
+            { return RedirectToAction("Index", "Home"); }
             if (ModelState.IsValid)
             {
                 db.Entry(tbuser).State = EntityState.Modified;
@@ -92,6 +106,8 @@ namespace SDQuizMaker.Controllers
         // GET: User/Delete/5
         public ActionResult Delete(string id)
         {
+            if ((string)Session["Accesslevel"] != "Admin")
+            { return RedirectToAction("Index", "Home"); }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -109,6 +125,8 @@ namespace SDQuizMaker.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
+            if ((string)Session["Accesslevel"] != "Admin")
+            { return RedirectToAction("Index", "Home"); }
             tbuser tbuser = db.tbusers.Find(id);
             db.tbusers.Remove(tbuser);
             db.SaveChanges();
