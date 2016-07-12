@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Text.RegularExpressions;
 
 namespace SDQuizMaker.Controllers
 {
@@ -28,7 +29,7 @@ namespace SDQuizMaker.Controllers
             var us = db.tbusers.FirstOrDefault(m => (m.Email == obj.Email) && m.Password == obj.Password);
             if (us == null)
             {
-                TempData["msg"] = "<script>alert('Wrong email or password');</script>";
+                TempData["msg"] = "<script>alert('Wrong Email Or Password');</script>";
             }
             else if (us.AccessLevel == "Student")
             {

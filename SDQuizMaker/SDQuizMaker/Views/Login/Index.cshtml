@@ -4,7 +4,6 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
 <h2>Login Page</h2>
 
 @using (Html.BeginForm())
@@ -17,6 +16,7 @@
                     @Html.Label("Email")
                 </td>
                 <td>
+                    @Html.ValidationSummary(true)
                     @Html.TextBoxFor(m => m.Email, new { @required = "required" })
                 </td>
             </tr>

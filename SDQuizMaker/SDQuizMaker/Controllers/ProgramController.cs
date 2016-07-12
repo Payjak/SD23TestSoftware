@@ -17,12 +17,16 @@ namespace SDQuizMaker.Controllers
         // GET: Program
         public ActionResult Index()
         {
+            if ((string)Session["Accesslevel"] != "Admin")
+            { return RedirectToAction("Index", "Home"); }
             return View(db.tbprograms.ToList());
         }
 
         // GET: Program/Details/5
         public ActionResult Details(int? id)
         {
+            if ((string)Session["Accesslevel"] != "Admin")
+            { return RedirectToAction("Index", "Home"); }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -38,6 +42,8 @@ namespace SDQuizMaker.Controllers
         // GET: Program/Create
         public ActionResult Create()
         {
+            if ((string)Session["Accesslevel"] != "Admin")
+            { return RedirectToAction("Index", "Home"); }
             return View();
         }
 
@@ -48,6 +54,8 @@ namespace SDQuizMaker.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ProgramID,Name")] tbprogram tbprogram)
         {
+            if ((string)Session["Accesslevel"] != "Admin")
+            { return RedirectToAction("Index", "Home"); }
             if (ModelState.IsValid)
             {
                 db.tbprograms.Add(tbprogram);
@@ -61,6 +69,8 @@ namespace SDQuizMaker.Controllers
         // GET: Program/Edit/5
         public ActionResult Edit(int? id)
         {
+            if ((string)Session["Accesslevel"] != "Admin")
+            { return RedirectToAction("Index", "Home"); }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -80,6 +90,8 @@ namespace SDQuizMaker.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "ProgramID,Name")] tbprogram tbprogram)
         {
+            if ((string)Session["Accesslevel"] != "Admin")
+            { return RedirectToAction("Index", "Home"); }
             if (ModelState.IsValid)
             {
                 db.Entry(tbprogram).State = EntityState.Modified;
@@ -92,6 +104,8 @@ namespace SDQuizMaker.Controllers
         // GET: Program/Delete/5
         public ActionResult Delete(int? id)
         {
+            if ((string)Session["Accesslevel"] != "Admin")
+            { return RedirectToAction("Index", "Home"); }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -109,6 +123,8 @@ namespace SDQuizMaker.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
+            if ((string)Session["Accesslevel"] != "Admin")
+            { return RedirectToAction("Index", "Home"); }
             tbprogram tbprogram = db.tbprograms.Find(id);
             db.tbprograms.Remove(tbprogram);
             db.SaveChanges();

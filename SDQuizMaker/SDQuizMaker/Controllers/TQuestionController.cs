@@ -17,6 +17,8 @@ namespace SDQuizMaker.Controllers
         // GET: TQuestion
         public ActionResult Index()
         {
+            if ((string)Session["Accesslevel"] != "Admin")
+            { return RedirectToAction("Index", "Home"); }
             var choosetemplateid = (string)HttpContext.Request.RequestContext.RouteData.Values["id"];
             var tbtquestions = db.tbtquestions.Include(t => t.tbtemplate);
             return View(tbtquestions.ToList().Where(q => q.TemplateID == Convert.ToInt32(choosetemplateid)));
@@ -25,6 +27,8 @@ namespace SDQuizMaker.Controllers
         // GET: TQuestion/Details/5
         public ActionResult Details(int? id)
         {
+            if ((string)Session["Accesslevel"] != "Admin")
+            { return RedirectToAction("Index", "Home"); }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -40,6 +44,8 @@ namespace SDQuizMaker.Controllers
         // GET: TQuestion/Create
         public ActionResult Create()
         {
+            if ((string)Session["Accesslevel"] != "Admin")
+            { return RedirectToAction("Index", "Home"); }
             ViewBag.TemplateID = new SelectList(db.tbtemplates, "TemplateID", "Name");
             return View();
         }
@@ -51,6 +57,8 @@ namespace SDQuizMaker.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "TQuestionID,TemplateID,Question,Explanation")] tbtquestion tbtquestion)
         {
+            if ((string)Session["Accesslevel"] != "Admin")
+            { return RedirectToAction("Index", "Home"); }
             if (ModelState.IsValid)
             {
                 db.tbtquestions.Add(tbtquestion);
@@ -65,6 +73,8 @@ namespace SDQuizMaker.Controllers
         // GET: TQuestion/Edit/5
         public ActionResult Edit(int? id)
         {
+            if ((string)Session["Accesslevel"] != "Admin")
+            { return RedirectToAction("Index", "Home"); }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -85,6 +95,8 @@ namespace SDQuizMaker.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "TQuestionID,TemplateID,Question,Explanation")] tbtquestion tbtquestion)
         {
+            if ((string)Session["Accesslevel"] != "Admin")
+            { return RedirectToAction("Index", "Home"); }
             if (ModelState.IsValid)
             {
                 db.Entry(tbtquestion).State = EntityState.Modified;
@@ -98,6 +110,8 @@ namespace SDQuizMaker.Controllers
         // GET: TQuestion/Delete/5
         public ActionResult Delete(int? id)
         {
+            if ((string)Session["Accesslevel"] != "Admin")
+            { return RedirectToAction("Index", "Home"); }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -115,6 +129,8 @@ namespace SDQuizMaker.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
+            if ((string)Session["Accesslevel"] != "Admin")
+            { return RedirectToAction("Index", "Home"); }
             tbtquestion tbtquestion = db.tbtquestions.Find(id);
             db.tbtquestions.Remove(tbtquestion);
             db.SaveChanges();

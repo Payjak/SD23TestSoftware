@@ -17,6 +17,8 @@ namespace SDQuizMaker.Controllers
         // GET: Intake
         public ActionResult Index()
         {
+            if ((string)Session["Accesslevel"] != "Admin")
+            { return RedirectToAction("Index", "Home"); }
             var tbintakes = db.tbintakes.Include(t => t.tbprogram);
             return View(tbintakes.ToList());
         }
@@ -24,6 +26,8 @@ namespace SDQuizMaker.Controllers
         // GET: Intake/Details/5
         public ActionResult Details(string id)
         {
+            if ((string)Session["Accesslevel"] != "Admin")
+            { return RedirectToAction("Index", "Home"); }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -39,6 +43,8 @@ namespace SDQuizMaker.Controllers
         // GET: Intake/Create
         public ActionResult Create()
         {
+            if ((string)Session["Accesslevel"] != "Admin")
+            { return RedirectToAction("Index", "Home"); }
             ViewBag.ProgramID = new SelectList(db.tbprograms, "ProgramID", "Name");
             return View();
         }
@@ -50,6 +56,8 @@ namespace SDQuizMaker.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ClassID,ProgramID")] tbintake tbintake)
         {
+            if ((string)Session["Accesslevel"] != "Admin")
+            { return RedirectToAction("Index", "Home"); }
             if (ModelState.IsValid)
             {
                 db.tbintakes.Add(tbintake);
@@ -64,6 +72,8 @@ namespace SDQuizMaker.Controllers
         // GET: Intake/Edit/5
         public ActionResult Edit(string id)
         {
+            if ((string)Session["Accesslevel"] != "Admin")
+            { return RedirectToAction("Index", "Home"); }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -84,6 +94,8 @@ namespace SDQuizMaker.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "ClassID,ProgramID")] tbintake tbintake)
         {
+            if ((string)Session["Accesslevel"] != "Admin")
+            { return RedirectToAction("Index", "Home"); }
             if (ModelState.IsValid)
             {
                 db.Entry(tbintake).State = EntityState.Modified;
@@ -97,6 +109,8 @@ namespace SDQuizMaker.Controllers
         // GET: Intake/Delete/5
         public ActionResult Delete(string id)
         {
+            if ((string)Session["Accesslevel"] != "Admin")
+            { return RedirectToAction("Index", "Home"); }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -114,6 +128,8 @@ namespace SDQuizMaker.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
+            if ((string)Session["Accesslevel"] != "Admin")
+            { return RedirectToAction("Index", "Home"); }
             tbintake tbintake = db.tbintakes.Find(id);
             db.tbintakes.Remove(tbintake);
             db.SaveChanges();

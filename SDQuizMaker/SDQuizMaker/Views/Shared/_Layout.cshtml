@@ -10,7 +10,7 @@
 </head>
 <body>
     <style>
-        .mypic {
+        .navpic {
             margin: -15px 0 -30px 0px; /* play with these to position the image */
             position: absolute;
             z-index: 100;
@@ -27,10 +27,10 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand hidden-sm hidden-xs hidden-md" href="/Home/Index">
-                    <img class="mypic" src="~/Images/robertsoncollege-logo.png" />
+                    <img class="navpic" src="~/Images/robertsoncollege-logo.png" />
                 </a>
                 <a class="navbar-brand hidden-lg hidden-xl" href="/Home/Index">
-                    <img class="mypic" src="~/Images/robertsoncollege-logo.png" />
+                    <img class="navpic" src="~/Images/robertsoncollege-logo.png" />
                 </a>
             </div>
 
@@ -39,15 +39,13 @@
                     @if ((string)Session["Accesslevel"] == "Admin")
                     {
                     <li>@Html.ActionLink("Logout","Logout","Login")</li>
+                    <li>@Html.ActionLink("Templates", "Index", "Template")</li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                            CRUD
+                            Admin
                             <span class="caret"></span>
                         </a>
-                        <ul class="dropdown-menu pull-right">
-                            <li>@Html.ActionLink("Templates","Index","Template")</li>
-                            <li>@Html.ActionLink("Template Answers","Index","TAnswer")</li>
-                            <li>@Html.ActionLink("Template Questions","Index","TQuestion")</li>
+                        <ul class="dropdown-menu pull-right">                          
                             <li>@Html.ActionLink("Intakes","Index","Intake")</li>
                             <li>@Html.ActionLink("Users","Index","User")</li>
                             <li>@Html.ActionLink("Programs","Index","Program")</li>
