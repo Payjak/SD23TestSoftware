@@ -1,0 +1,35 @@
+﻿@model SDQuizMaker.Models.tbresponsedetail
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tbresponsedetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tbianswer.Text)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbianswer.Text)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tbresponse.UserID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbresponse.UserID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DetailID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
