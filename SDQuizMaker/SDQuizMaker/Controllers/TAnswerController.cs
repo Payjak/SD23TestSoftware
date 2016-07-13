@@ -19,7 +19,8 @@ namespace SDQuizMaker.Controllers
         {
             if ((string)Session["Accesslevel"] != "Admin")
             { return RedirectToAction("Index", "Home"); }
-            var chooseanswerid = (string)HttpContext.Request.RequestContext.RouteData.Values["id"];
+            Session["sessionanswerid"] = (string)HttpContext.Request.RequestContext.RouteData.Values["id"];
+            var chooseanswerid = Session["sessionanswereid"];
             var tbtanswers = db.tbtanswers.Include(t => t.tbtquestion);
             return View(tbtanswers.ToList().Where(a => a.TQuestionID == Convert.ToInt32(chooseanswerid)));
         }
