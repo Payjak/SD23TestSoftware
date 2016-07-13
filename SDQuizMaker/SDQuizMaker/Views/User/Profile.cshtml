@@ -1,0 +1,113 @@
+﻿
+@{
+    ViewBag.Title = "Profile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="margin-top:40px">Profile</h2>
+
+<style>
+    .box
+    {     
+        height:170px;
+        width:100%;
+        position:relative;
+    }
+    .box2
+    {     
+        height:650px;
+        width:100%;
+        position:relative;
+    }
+    .col-md-1
+    {
+        width:150px;
+        height:150px;
+        border:solid black;
+        border-radius:50%;
+        position:relative;
+    }
+    .col-md-6
+    {
+        border:solid red;
+        height:150px;
+        width:500px;
+        margin-left:10px;
+        position:relative;
+    }
+    .col-md-3
+    {
+        border:solid black;
+        height:150px;
+        margin-left:10px;
+        position:relative;
+    }
+    .col-md-8
+    {
+        width:150px;
+        height:100px;
+        border:solid red;
+        position:relative;
+    }
+    .col-md-2
+    {
+        width:115px;
+        height:30px;
+        border:solid red;
+        margin-top:10px;
+        position:relative;
+    }
+    .col-md-4
+    {
+        border:solid red;
+        width:795px;
+        height:350px;
+        margin-left:10px;
+        position:relative;
+    }
+</style>
+
+<div class="box">
+    <div class="col-md-1">
+
+    </div>
+    <div class="col-md-6">
+        <table>
+            <tr>
+                <td>
+                    @Html.Label("Name:")
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.Label("Class:")
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.Label("Course:")
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-md-3">
+
+    </div>
+</div>
+<div class="box2">
+    <div class="col-md-8">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-2">
+
+        </div>
+    </div>
+    <div class="col-md-4">
+
+    </div>
+</div>
+
+
+
+

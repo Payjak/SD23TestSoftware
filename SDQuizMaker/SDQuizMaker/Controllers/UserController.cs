@@ -24,6 +24,11 @@ namespace SDQuizMaker.Controllers
             return View(db.tbusers.ToList());
         }
 
+        public ActionResult Profile()
+        {
+            return View();
+        }
+
         // GET: User/Details/5
         public ActionResult Details(string id)
         {
