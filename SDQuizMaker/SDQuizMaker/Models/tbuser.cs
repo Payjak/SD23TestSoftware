@@ -15,18 +15,19 @@ namespace SDQuizMaker.Models
             tbinstances = new HashSet<tbinstance>();
             tbresponses = new HashSet<tbresponse>();
         }
-
+        [Required]
         [Key]
         [StringLength(10)]
         public string UserID { get; set; }
-
+        public string ProfilePic { get; set; }
+        [Required]
         [StringLength(80)]
         [RegularExpression (@"[a-z0-9]+[_a-z0-9\.-]*[a-z0-9]+@robertsoncollege+(\.net+)", ErrorMessage ="Thats not a Robertson email")]
         public string Email { get; set; }
-
+        [Required]
         [StringLength(50)]
         public string Password { get; set; }
-
+        [Required]
         [StringLength(10)]
         public string AccessLevel { get; set; }
 

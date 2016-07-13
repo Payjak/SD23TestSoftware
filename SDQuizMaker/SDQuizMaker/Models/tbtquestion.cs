@@ -18,9 +18,9 @@ namespace SDQuizMaker.Models
         public int TQuestionID { get; set; }
 
         public int? TemplateID { get; set; }
-
+        [Required]
         public string Question { get; set; }
-
+        [Required]
         public string Explanation { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

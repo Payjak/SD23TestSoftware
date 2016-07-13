@@ -33,6 +33,7 @@ namespace SDQuizMaker.Controllers
             }
             else if (us.AccessLevel == "Student")
             {
+                Session["ProfilePic"] = us.ProfilePic;
                 Session["Email"] = us.Email;
                 Session["AccessLevel"] = us.AccessLevel;
                 Session["UserID"] = us.UserID;
@@ -40,6 +41,7 @@ namespace SDQuizMaker.Controllers
             }
             else if (us.AccessLevel == "Mentor")
             {
+                Session["ProfilePic"] = us.ProfilePic;
                 Session["Email"] = us.Email;
                 Session["AccessLevel"] = us.AccessLevel;
                 Session["UserID"] = us.UserID;
@@ -47,6 +49,7 @@ namespace SDQuizMaker.Controllers
             }
             else if (us.AccessLevel == "Admin")
             {
+                Session["ProfilePic"] = us.ProfilePic;
                 Session["Email"] = us.Email;
                 Session["AccessLevel"] = us.AccessLevel;
                 Session["UserID"] = us.UserID;

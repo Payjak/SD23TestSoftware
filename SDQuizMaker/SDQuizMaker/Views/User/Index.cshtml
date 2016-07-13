@@ -16,6 +16,9 @@
             UserID
         </th>
         <th>
+            ProfilePic
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Email)
         </th>
         <th>
@@ -32,6 +35,18 @@
         <td>
             @Html.DisplayFor(modelItem => item.UserID)
         </td>
+        @if ((string)Session["ProfilePic"] != null)
+        {
+        <td>
+            <img src="@Url.Content(item.ProfilePic)" class="img-thumbnail" height="100" width="100" />
+        </td>
+        }
+        else
+        {
+        <td>
+            <img class="img-thumbnail" src="http://53percent.com/images/noimg.gif" height="300" width="150" />
+        </td>
+ }
         <td>
             @Html.DisplayFor(modelItem => item.Email)
         </td>

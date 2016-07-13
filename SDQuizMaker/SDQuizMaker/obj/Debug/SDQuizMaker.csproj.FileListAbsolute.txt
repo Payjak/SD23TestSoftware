@@ -39,7 +39,6 @@ C:\Users\Rob P\Source\Repos\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\System.
 C:\Users\Rob P\Source\Repos\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\System.Web.WebPages.Razor.xml
 C:\Users\Rob P\Source\Repos\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\Antlr3.Runtime.pdb
 C:\Users\Rob P\Source\Repos\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\Newtonsoft.Json.xml
-C:\Users\Rob P\Source\Repos\SD23TestSoftware\SDQuizMaker\SDQuizMaker\obj\Debug\SDQuizMaker.csprojResolveAssemblyReference.cache
 C:\Users\Rob P\Source\Repos\SD23TestSoftware\SDQuizMaker\SDQuizMaker\obj\Debug\SDQuizMaker.dll
 C:\Users\Rob P\Source\Repos\SD23TestSoftware\SDQuizMaker\SDQuizMaker\obj\Debug\SDQuizMaker.pdb
 C:\Users\joshua janolo\Documents\GitHub\SD23TestSoftware\SDQuizMaker\SDQuizMaker\bin\roslyn\csc.exe
@@ -130,3 +129,4 @@ C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker
 C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\obj\Debug\SDQuizMaker.csprojResolveAssemblyReference.cache
 C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\obj\Debug\SDQuizMaker.dll
 C:\Users\hessianb\Documents\GitHub\SD23\SD23TestSoftware\SDQuizMaker\SDQuizMaker\obj\Debug\SDQuizMaker.pdb
+C:\Users\Rob P\Source\Repos\SD23TestSoftware\SDQuizMaker\SDQuizMaker\obj\Debug\SDQuizMaker.csprojResolveAssemblyReference.cache

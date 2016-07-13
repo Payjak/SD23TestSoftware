@@ -25,6 +25,7 @@
                     @Html.Label("Password")
                 </td>
                 <td>
+                    @Html.ValidationSummary(true)
                     @Html.PasswordFor(m => m.Password, new { @required = "required" })
                 </td>
             </tr>

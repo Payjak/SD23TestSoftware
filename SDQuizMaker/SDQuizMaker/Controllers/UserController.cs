@@ -54,7 +54,7 @@ namespace SDQuizMaker.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "UserID,Email,Password,AccessLevel")] tbuser tbuser)
+        public ActionResult Create([Bind(Include = "UserID,ProfilePic,Email,Password,AccessLevel")] tbuser tbuser)
         {
             if ((string)Session["Accesslevel"] != "Admin")
             { return RedirectToAction("Index", "Home"); }
@@ -90,7 +90,7 @@ namespace SDQuizMaker.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "UserID,Email,Password,AccessLevel")] tbuser tbuser)
+        public ActionResult Edit([Bind(Include = "UserID,ProfilePic,Email,Password,AccessLevel")] tbuser tbuser)
         {
             if ((string)Session["Accesslevel"] != "Admin")
             { return RedirectToAction("Index", "Home"); }

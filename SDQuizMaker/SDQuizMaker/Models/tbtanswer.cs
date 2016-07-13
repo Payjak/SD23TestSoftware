@@ -10,7 +10,7 @@ namespace SDQuizMaker.Models
     {
         [Key]
         public int TAnswerID { get; set; }
-
+        [Required]
         public string Text { get; set; }
 
         public bool? Correct { get; set; }
