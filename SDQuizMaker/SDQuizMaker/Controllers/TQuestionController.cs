@@ -25,6 +25,16 @@ namespace SDQuizMaker.Controllers
             return View(tbtquestions.ToList().Where(q => q.TemplateID == Convert.ToInt32(choosetemplateid)));
         }
 
+        public ActionResult BackToIndex()
+        {
+            if ((string)Session["Accesslevel"] != "Admin")
+            { return RedirectToAction("Index", "Home"); }
+            var choosetemplateid = Session["sessiontemplateid"];
+            var tbtquestions = db.tbtquestions.Include(t => t.tbtemplate);
+            return View(tbtquestions.ToList().Where(q => q.TemplateID == Convert.ToInt32(choosetemplateid)));
+
+        }
+
         // GET: TQuestion/Details/5
         public ActionResult Details(int? id)
         {
@@ -64,7 +74,7 @@ namespace SDQuizMaker.Controllers
             {
                 db.tbtquestions.Add(tbtquestion);
                 db.SaveChanges();
-                var tbtquestionid = tbtquestion.TQuestionID;
+                Session ["sessionquestionid"] = tbtquestion.TQuestionID;
                 return RedirectToAction("Index", "TAnswer");
             }
 
