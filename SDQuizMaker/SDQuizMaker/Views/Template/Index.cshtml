@@ -24,10 +24,10 @@
             @Html.DisplayFor(modelItem => item.Name)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.TemplateID }) |
+            @Html.ActionLink("Rename", "Edit", new { id=item.TemplateID }) |
             @Html.ActionLink("Details", "Details", new { id=item.TemplateID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.TemplateID }) |
-            @Html.ActionLink("Use Template", "Index", "TQuestion", new { id=item.TemplateID },null) 
+            @Html.ActionLink("Questions", "Index", "TQuestion", new { id=item.TemplateID },null) 
         </td>
     </tr>
 }
