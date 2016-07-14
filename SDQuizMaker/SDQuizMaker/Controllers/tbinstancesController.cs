@@ -41,6 +41,7 @@ namespace SDQuizMaker
         {
             ViewBag.ClassID = new SelectList(db.tbintakes, "ClassID", "ClassID");
             ViewBag.UserID = new SelectList(db.tbusers, "UserID", "Email");
+            ViewBag.TemplateID = new SelectList(db.tbtemplates, "TemplateID", "Name");
             return View();
         }
 
@@ -49,7 +50,7 @@ namespace SDQuizMaker
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "InstanceID,StartTime,EndTime,UserID,ClassID")] tbinstance tbinstance)
+        public ActionResult Create([Bind(Include = "InstanceID,StartTime,EndTime,UserID,ClassID,TemplateID")] tbinstance tbinstance)
         {
             if (ModelState.IsValid)
             {
@@ -60,6 +61,7 @@ namespace SDQuizMaker
 
             ViewBag.ClassID = new SelectList(db.tbintakes, "ClassID", "ClassID", tbinstance.ClassID);
             ViewBag.UserID = new SelectList(db.tbusers, "UserID", "Email", tbinstance.UserID);
+            ViewBag.TemplateID = new SelectList(db.tbtemplates, "TemplateID", "Name", tbinstance.TemplateID);
             return View(tbinstance);
         }
 

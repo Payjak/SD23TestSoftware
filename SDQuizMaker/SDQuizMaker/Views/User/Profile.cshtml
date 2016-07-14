@@ -1,7 +1,9 @@
-﻿
+﻿@model SDQuizMaker.Models.tbuser
+
 @{
     ViewBag.Title = "Profile";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    var pic = (string)Session["ProfilePic"];
 }
 
 <h2 style="margin-top:40px">Profile</h2>
@@ -11,21 +13,25 @@
     {     
         height:170px;
         width:100%;
-        position:relative;
     }
     .box2
     {     
         height:650px;
         width:100%;
-        position:relative;
+    }
+    .img-circle
+    {
+        width:150px;
+        height:150px;
+        border-radius:50%; 
+        margin-left:-18px;
+        border:solid red;
     }
     .col-md-1
     {
         width:150px;
-        height:150px;
-        border:solid black;
-        border-radius:50%;
-        position:relative;
+        height:150px;        
+        border-radius:50%;            
     }
     .col-md-6
     {
@@ -33,29 +39,26 @@
         height:150px;
         width:500px;
         margin-left:10px;
-        position:relative;
     }
     .col-md-3
     {
         border:solid black;
         height:150px;
         margin-left:10px;
-        position:relative;
     }
     .col-md-8
     {
         width:150px;
         height:100px;
         border:solid red;
-        position:relative;
+        background-color:rgba(251, 3, 3, 0.19);
     }
     .col-md-2
     {
         width:115px;
         height:30px;
-        border:solid red;
+        border-top:solid red;
         margin-top:10px;
-        position:relative;
     }
     .col-md-4
     {
@@ -63,29 +66,36 @@
         width:795px;
         height:350px;
         margin-left:10px;
-        position:relative;
     }
 </style>
 
 <div class="box">
     <div class="col-md-1">
-
+        @if ((string)Session["ProfilePic"] != null)
+        {
+            <img class="img-circle" src="@pic" />
+        }
+        else
+        {
+            <img class="img-circle" src="http://53percent.com/images/noimg.gif"/>
+        }
     </div>
     <div class="col-md-6">
         <table>
             <tr>
                 <td>
-                    @Html.Label("Name:")
+                    ID:
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.UserID)
                 </td>
             </tr>
             <tr>
                 <td>
-                    @Html.Label("Class:")
+                    Email:
                 </td>
-            </tr>
-            <tr>
                 <td>
-                    @Html.Label("Course:")
+                    @Html.DisplayFor(model => model.Email)
                 </td>
             </tr>
         </table>
@@ -97,10 +107,10 @@
 <div class="box2">
     <div class="col-md-8">
         <div class="col-md-2">
-
+            <input type="submit" style="width:inherit;margin-left:-15px;" value="Profile" />
         </div>
         <div class="col-md-2">
-
+            <input type="submit" style="width:inherit;margin-left:-15px;" value="Quizes" />
         </div>
     </div>
     <div class="col-md-4">

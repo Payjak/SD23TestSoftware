@@ -19,10 +19,20 @@ namespace SDQuizMaker.Controllers
         {
             if ((string)Session["Accesslevel"] != "Admin")
             { return RedirectToAction("Index", "Home"); }
-            Session["sessionanswerid"] = (string)HttpContext.Request.RequestContext.RouteData.Values["id"];
-            var chooseanswerid = Session["sessionanswereid"];
+            var choosequestionid = Session["sessionquestionid"];
             var tbtanswers = db.tbtanswers.Include(t => t.tbtquestion);
-            return View(tbtanswers.ToList().Where(a => a.TQuestionID == Convert.ToInt32(chooseanswerid)));
+            return View(tbtanswers.ToList().Where(a => a.TQuestionID == Convert.ToInt32(choosequestionid)));
+        }
+
+        public ActionResult GetAnswersIndex()
+        {
+            if ((string)Session["Accesslevel"] != "Admin")
+            { return RedirectToAction("Index", "Home"); }
+            Session["sessionquestionid"] = (string)HttpContext.Request.RequestContext.RouteData.Values["id"];
+            var choosequestionid = Session["sessionquestionid"];
+            var tbtanswers = db.tbtanswers.Include(t => t.tbtquestion);
+            return View(tbtanswers.ToList().Where(a => a.TQuestionID == Convert.ToInt32(choosequestionid)));
+            
         }
 
         // GET: TAnswer/Details/5

@@ -1,0 +1,50 @@
+﻿@model IEnumerable<SDQuizMaker.Models.tbtanswer>
+
+@{
+    ViewBag.Title = "GetAnswersIndex";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New Answer", "Create")
+    @Html.ActionLink("Back to Questions", "BackToIndex", "Tquestion")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.tbtquestion.Question)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Text)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Correct)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.tbtquestion.Question)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Text)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Correct)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.TAnswerID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.TAnswerID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.TAnswerID })
+            </td>
+        </tr>
+    }
+
+</table>
+
+

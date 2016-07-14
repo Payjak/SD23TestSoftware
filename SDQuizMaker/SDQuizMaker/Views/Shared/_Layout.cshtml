@@ -38,8 +38,9 @@
                 <ul class="nav navbar-nav pull-right">
                     @if ((string)Session["Accesslevel"] == "Admin")
                     {
+                    <li>@Html.ActionLink("Profile","Profile","User")</li>
                     <li>@Html.ActionLink("Logout","Logout","Login")</li>
-                    <li>@Html.ActionLink("Templates", "Index", "Template")</li>
+                    <li>@Html.ActionLink("Quiz Create", "Index", "Template")</li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                             Admin
@@ -49,6 +50,11 @@
                             <li>@Html.ActionLink("Intakes","Index","Intake")</li>
                             <li>@Html.ActionLink("Users","Index","User")</li>
                             <li>@Html.ActionLink("Programs","Index","Program")</li>
+                            <li>@Html.ActionLink("Issue Quiz","Index","tbinstances")</li>
+                            <li>@Html.ActionLink("IAnswer","Index","tbianswers")</li>
+                            <li>@Html.ActionLink("IQuestion","Index","tbiquestions")</li>
+                            <li>@Html.ActionLink("Response","Index","tbresponses")</li>
+                            <li>@Html.ActionLink("ResponseDetail","Index","tbresponsedetails")</li>
                         </ul>
                     </li>
                     }

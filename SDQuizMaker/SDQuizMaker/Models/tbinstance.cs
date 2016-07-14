@@ -5,6 +5,8 @@ namespace SDQuizMaker.Models
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using System.Data.Entity;
+    using System.Linq;
 
     [Table("tbinstance")]
     public partial class tbinstance
@@ -28,6 +30,7 @@ namespace SDQuizMaker.Models
 
         [StringLength(20)]
         public string ClassID { get; set; }
+        public int TemplateID { get; set; }
 
         public virtual tbintake tbintake { get; set; }
 

@@ -13,6 +13,9 @@
 <table class="table">
     <tr>
         <th>
+            @Html.DisplayNameFor(model => model.TemplateID)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.tbintake.ClassID)
         </th>
         <th>
@@ -29,6 +32,9 @@
 
 @foreach (var item in Model) {
     <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TemplateID)
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.tbintake.ClassID)
         </td>
