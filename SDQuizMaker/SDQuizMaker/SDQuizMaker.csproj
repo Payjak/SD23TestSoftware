@@ -135,6 +135,11 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ProgramController.cs" />
     <Compile Include="Controllers\TAnswerController.cs" />
+    <Compile Include="Controllers\tbianswersController.cs" />
+    <Compile Include="Controllers\tbinstancesController.cs" />
+    <Compile Include="Controllers\tbiquestionsController.cs" />
+    <Compile Include="Controllers\tbresponsedetailsController.cs" />
+    <Compile Include="Controllers\tbresponsesController.cs" />
     <Compile Include="Controllers\TemplateController.cs" />
     <Compile Include="Controllers\TQuestionController.cs" />
     <Compile Include="Controllers\UserController.cs" />

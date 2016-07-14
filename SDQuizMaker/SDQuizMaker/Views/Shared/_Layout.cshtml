@@ -52,6 +52,10 @@
                         </ul>
                     </li>
                     }
+                    else if ((string)Session["AccessLevel"] == "Student")
+                    {
+                        <li>@Html.ActionLink("Logout","Logout","Login")</li>
+                    }
                     else
                     {
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
