@@ -135,6 +135,11 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ProgramController.cs" />
     <Compile Include="Controllers\TAnswerController.cs" />
+    <Compile Include="Controllers\tbianswersController.cs" />
+    <Compile Include="Controllers\tbinstancesController.cs" />
+    <Compile Include="Controllers\tbiquestionsController.cs" />
+    <Compile Include="Controllers\tbresponsedetailsController.cs" />
+    <Compile Include="Controllers\tbresponsesController.cs" />
     <Compile Include="Controllers\TemplateController.cs" />
     <Compile Include="Controllers\TQuestionController.cs" />
     <Compile Include="Controllers\UserController.cs" />
@@ -224,6 +229,31 @@
     <Content Include="Views\User\Edit.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\User\Profile.cshtml" />
+    <Content Include="Views\tbianswers\Create.cshtml" />
+    <Content Include="Views\tbianswers\Delete.cshtml" />
+    <Content Include="Views\tbianswers\Details.cshtml" />
+    <Content Include="Views\tbianswers\Edit.cshtml" />
+    <Content Include="Views\tbianswers\Index.cshtml" />
+    <Content Include="Views\tbinstances\Create.cshtml" />
+    <Content Include="Views\tbinstances\Delete.cshtml" />
+    <Content Include="Views\tbinstances\Details.cshtml" />
+    <Content Include="Views\tbinstances\Edit.cshtml" />
+    <Content Include="Views\tbinstances\Index.cshtml" />
+    <Content Include="Views\tbiquestions\Create.cshtml" />
+    <Content Include="Views\tbiquestions\Delete.cshtml" />
+    <Content Include="Views\tbiquestions\Details.cshtml" />
+    <Content Include="Views\tbiquestions\Edit.cshtml" />
+    <Content Include="Views\tbiquestions\Index.cshtml" />
+    <Content Include="Views\tbresponsedetails\Create.cshtml" />
+    <Content Include="Views\tbresponsedetails\Delete.cshtml" />
+    <Content Include="Views\tbresponsedetails\Details.cshtml" />
+    <Content Include="Views\tbresponsedetails\Edit.cshtml" />
+    <Content Include="Views\tbresponsedetails\Index.cshtml" />
+    <Content Include="Views\tbresponses\Create.cshtml" />
+    <Content Include="Views\tbresponses\Delete.cshtml" />
+    <Content Include="Views\tbresponses\Details.cshtml" />
+    <Content Include="Views\tbresponses\Edit.cshtml" />
+    <Content Include="Views\tbresponses\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
