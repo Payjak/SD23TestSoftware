@@ -26,7 +26,13 @@ namespace SDQuizMaker.Controllers
 
         public ActionResult Profile()
         {
-            return View();
+            var id = Session["UserID"];
+            tbuser tbuser = db.tbusers.Find(id);
+            if (tbuser == null)
+            {
+                return HttpNotFound();
+            }
+            return View(tbuser);
         }
 
         // GET: User/Details/5

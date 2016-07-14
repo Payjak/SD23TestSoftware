@@ -38,6 +38,7 @@
                 <ul class="nav navbar-nav pull-right">
                     @if ((string)Session["Accesslevel"] == "Admin")
                     {
+                    <li>@Html.ActionLink("Profile","Profile","User")</li>
                     <li>@Html.ActionLink("Logout","Logout","Login")</li>
                     <li>@Html.ActionLink("Quiz Create", "Index", "Template")</li>
                     <li class="dropdown">
