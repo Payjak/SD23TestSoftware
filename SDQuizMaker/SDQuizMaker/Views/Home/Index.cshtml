@@ -5,7 +5,11 @@
 <style>
     .jumbotron {
         background: linear-gradient(to right, rgba(243, 136, 128, 0.78), rgba(186, 60, 60, 0.71)),url(http://www.robertsoncollege.com/site/assets/files/1097/building.768x0.jpg);
-        background-size: 100%;
+        margin-top:40px;
+        background-size:100%;
+        width:120%;
+        margin-left:-10%;
+        border-radius:unset;
     }
 
         .jumbotron h1 {
@@ -24,6 +28,11 @@
         to {
             opacity: 1;
         }
+    }
+
+    @@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
     }
 
     .col-md-1 {
@@ -57,12 +66,23 @@
         -webkit-animation-duration: 1s;
         -webkit-animation-delay: 2.1s;
     }
+    .glyphicon
+    {
+        -webkit-transition: -webkit-transform .8s ease-in-out;
+    }
+    .glyphicon:hover
+    {
+        -webkit-transform: rotate(360deg);
+    }
 </style>
 
-<div class="jumbotron" style="margin-top:40px;">
-    <h1>RCTS</h1>
-    <p class="lead">RCTS is a custom test maker website for Robertson College.</p>
-</div>
+    <div class="jumbotron">
+        <div class="container">
+            <h1>RCTS</h1>
+            <p class="lead">RCTS is a custom test maker website for Robertson College.</p>
+        </div>
+    </div>
+    
 
 <div class="row">
     <div class="col-md-1" style="width:25%">
