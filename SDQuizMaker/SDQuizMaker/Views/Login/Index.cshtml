@@ -4,33 +4,100 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>Login Page</h2>
 
-@using (Html.BeginForm())
-{
-    <div>
+<style>
+    .loginbox
+    {
+        height:200px;
+        width:400px;
+        padding:10px;
+        margin-top:100px;
+        margin-left:auto;
+        margin-right:auto;
+        border:solid;
+
+    }
+    .topbar
+    {
+        width:380px;
+        height:50px;
+        background-color:firebrick;
+        align-content:center;
+        margin-left:-10px;
+        margin-right:-10px;
+        
+    }
+    .Login
+    {
+        width:394px;
+        margin-left:-11px;
+        margin-right:-10px;
+        margin-top:-11px;
+        text-align:center;
+        font-size:x-large;
+        color:white;
+        background-color:firebrick;
+    }
+
+
+  
+</style>
+@*@using (Html.BeginForm())*@
+
+<div class="loginbox">
+    <table>
+        <tr>
+            <td>
+                <div class="Login">Login</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div>@Html.Label("Email")                   
+                    @Html.ValidationSummary(true)
+                    @Html.TextBoxFor(m => m.Email, new { @required = "required" })
+                </div>           
+            </td>        
+        </tr>
+        <tr>
+            <td>
+                <div>
+                @Html.Label("Password")
+                @Html.ValidationSummary(true)
+                @Html.PasswordFor(m => m.Password, new { @required = "required" })
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div><input type="submit" value="Login" /></div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+    @*<div>
         @Html.Raw(TempData["msg"])
         <table>
             <tr>
                 <td>
-                    @Html.Label("Email")
+                    
                 </td>
                 <td>
-                    @Html.ValidationSummary(true)
-                    @Html.TextBoxFor(m => m.Email, new { @required = "required" })
+                    
                 </td>
             </tr>
             <tr>
                 <td>
-                    @Html.Label("Password")
+                    
                 </td>
                 <td>
-                    @Html.ValidationSummary(true)
-                    @Html.PasswordFor(m => m.Password, new { @required = "required" })
+                    
                 </td>
             </tr>
         </table>
-    </div>
-    <input type="submit" value="Login" />
-}
+    </div>*@
+    
+
 
