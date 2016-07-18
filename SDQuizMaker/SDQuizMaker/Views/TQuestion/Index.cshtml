@@ -8,8 +8,11 @@
 <h2>Template Questions</h2>
 
 <p>
-    @Html.ActionLink("Create New Question", "Create")
-    @Html.ActionLink("Back to Templates", "Index", "Template")
+    @Html.ActionLink("Create New Question", "Create", null,
+    new { @style = "color:black;", @class = "btn btn-default btn-sml" })
+
+    @Html.ActionLink("Back to Templates", "Index", "Template", null,
+    new { @style = "color:black;", @class = "btn btn-default btn-sml" })
 </p>
 <table class="table">
     <tr>

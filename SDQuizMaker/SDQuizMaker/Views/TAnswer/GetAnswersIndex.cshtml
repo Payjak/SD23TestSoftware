@@ -8,8 +8,11 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New Answer", "Create")
-    @Html.ActionLink("Back to Questions", "BackToIndex", "Tquestion")
+    @Html.ActionLink("Create New Answer", "Create", null,
+    new { @style = "color:black;", @class = "btn btn-default btn-sml" })
+
+    @Html.ActionLink("Back to Questions", "BackToIndex", "Tquestion", null,
+    new { @style = "color:black;", @class = "btn btn-default btn-sml" })
 </p>
 <table class="table">
     <tr>
