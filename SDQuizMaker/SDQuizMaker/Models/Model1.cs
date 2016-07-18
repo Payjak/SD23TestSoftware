@@ -31,7 +31,7 @@ namespace SDQuizMaker.Models
                 .IsUnicode(false);
 
             modelBuilder.Entity<tbinstance>()
-                .Property(e => e.UserID)
+                .Property(e => e.ClassID)
                 .IsUnicode(false);
 
             modelBuilder.Entity<tbinstance>()

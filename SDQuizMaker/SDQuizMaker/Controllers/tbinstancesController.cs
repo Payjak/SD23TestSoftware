@@ -17,7 +17,7 @@ namespace SDQuizMaker
         // GET: tbinstances
         public ActionResult Index()
         {
-            var tbinstances = db.tbinstances.Include(t => t.tbintake).Include(t => t.tbuser);
+            var tbinstances = db.tbinstances.Include(t => t.tbintake);
             return View(tbinstances.ToList());
         }
 
@@ -40,7 +40,6 @@ namespace SDQuizMaker
         public ActionResult Create()
         {
             ViewBag.ClassID = new SelectList(db.tbintakes, "ClassID", "ClassID");
-            ViewBag.UserID = new SelectList(db.tbusers, "UserID", "Email");
             ViewBag.TemplateID = new SelectList(db.tbtemplates, "TemplateID", "Name");
             return View();
         }
@@ -60,7 +59,6 @@ namespace SDQuizMaker
             }
 
             ViewBag.ClassID = new SelectList(db.tbintakes, "ClassID", "ClassID", tbinstance.ClassID);
-            ViewBag.UserID = new SelectList(db.tbusers, "UserID", "Email", tbinstance.UserID);
             ViewBag.TemplateID = new SelectList(db.tbtemplates, "TemplateID", "Name", tbinstance.TemplateID);
             return View(tbinstance);
         }
@@ -78,7 +76,6 @@ namespace SDQuizMaker
                 return HttpNotFound();
             }
             ViewBag.ClassID = new SelectList(db.tbintakes, "ClassID", "ClassID", tbinstance.ClassID);
-            ViewBag.UserID = new SelectList(db.tbusers, "UserID", "Email", tbinstance.UserID);
             return View(tbinstance);
         }
 
@@ -96,7 +93,6 @@ namespace SDQuizMaker
                 return RedirectToAction("Index");
             }
             ViewBag.ClassID = new SelectList(db.tbintakes, "ClassID", "ClassID", tbinstance.ClassID);
-            ViewBag.UserID = new SelectList(db.tbusers, "UserID", "Email", tbinstance.UserID);
             return View(tbinstance);
         }
 

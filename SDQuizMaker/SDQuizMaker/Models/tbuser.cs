@@ -12,7 +12,6 @@ namespace SDQuizMaker.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public tbuser()
         {
-            tbinstances = new HashSet<tbinstance>();
             tbresponses = new HashSet<tbresponse>();
         }
         [Required]
@@ -33,9 +32,6 @@ namespace SDQuizMaker.Models
         [Required]
         [StringLength(10)]
         public string AccessLevel { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tbinstance> tbinstances { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tbresponse> tbresponses { get; set; }
