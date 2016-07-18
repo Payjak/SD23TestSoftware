@@ -2,78 +2,91 @@
     ViewBag.Title = "Home Page";
 }
 
+
 <style>
-    .jumbotron {
-        background: linear-gradient(to right, rgba(243, 136, 128, 0.78), rgba(186, 60, 60, 0.71)),url(http://www.robertsoncollege.com/site/assets/files/1097/building.768x0.jpg);
-        margin-top:40px;
-        background-size:100%;
-        width:120%;
-        margin-left:-10%;
-        border-radius:unset;
-    }
-
-        .jumbotron h1 {
-            color: white;
+        .jumbotron {
+            background: linear-gradient(to right, rgba(243, 136, 128, 0.78), rgba(186, 60, 60, 0.71)),url(http://www.robertsoncollege.com/site/assets/files/1097/building.768x0.jpg);
+            margin-top:60px;
+            background-size:100%;
+            width:120%;
+            margin-left:-10%;
+            border-radius:unset;
         }
 
-        .jumbotron p {
-            color: white;
+            .jumbotron h1 {
+                color: white;
+            }
+
+            .jumbotron p {
+                color: white;
+            }
+
+        @@-webkit-keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
 
-    @@-webkit-keyframes fadeIn {
-        from {
+        @@-webkit-keyframes spin {
+        from { -webkit-transform: rotate(0deg); }
+        to { -webkit-transform: rotate(360deg); }
+        }
+
+        .col-md-1 {
             opacity: 0;
+            -webkit-animation: fadeIn ease-in 1;
+            -webkit-animation-fill-mode: forwards;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-delay: 0.7s;
         }
 
-        to {
-            opacity: 1;
+        .col-md-2 {
+            opacity: 0;
+            -webkit-animation: fadeIn ease-in 1;
+            -webkit-animation-fill-mode: forwards;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-delay: 1.2s;
         }
-    }
 
-    @@-webkit-keyframes spin {
-    from { -webkit-transform: rotate(0deg); }
-    to { -webkit-transform: rotate(360deg); }
-    }
+        .col-md-3 {
+            opacity: 0;
+            -webkit-animation: fadeIn ease-in 1;
+            -webkit-animation-fill-mode: forwards;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-delay: 1.6s;
+        }
 
-    .col-md-1 {
-        opacity: 0;
-        -webkit-animation: fadeIn ease-in 1;
-        -webkit-animation-fill-mode: forwards;
-        -webkit-animation-duration: 1s;
-        -webkit-animation-delay: 0.7s;
-    }
-
-    .col-md-2 {
-        opacity: 0;
-        -webkit-animation: fadeIn ease-in 1;
-        -webkit-animation-fill-mode: forwards;
-        -webkit-animation-duration: 1s;
-        -webkit-animation-delay: 1.2s;
-    }
-
-    .col-md-3 {
-        opacity: 0;
-        -webkit-animation: fadeIn ease-in 1;
-        -webkit-animation-fill-mode: forwards;
-        -webkit-animation-duration: 1s;
-        -webkit-animation-delay: 1.6s;
-    }
-
-    .col-md-4 {
-        opacity: 0;
-        -webkit-animation: fadeIn ease-in 1;
-        -webkit-animation-fill-mode: forwards;
-        -webkit-animation-duration: 1s;
-        -webkit-animation-delay: 2.1s;
-    }
-    .glyphicon
-    {
-        -webkit-transition: -webkit-transform .8s ease-in-out;
-    }
-    .glyphicon:hover
-    {
-        -webkit-transform: rotate(360deg);
-    }
+        .col-md-4 {
+            opacity: 0;
+            -webkit-animation: fadeIn ease-in 1;
+            -webkit-animation-fill-mode: forwards;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-delay: 2.1s;
+        }
+        .col-md-12
+        {
+            width:120%;
+            margin-left:-10%;
+            background-color:rgba(248, 84, 84, 0.91);
+            height:30px;
+        }
+        #myCarousel
+        {
+            background-color:rgba(232, 34, 34, 0.81);
+        }
+        .glyphicon
+        {
+            -webkit-transition: -webkit-transform .8s ease-in-out;
+        }
+        .glyphicon:hover
+        {
+            -webkit-transform: rotate(360deg);
+        }
+  
 </style>
 
     <div class="jumbotron">
@@ -88,29 +101,100 @@
     <div class="col-md-1" style="width:25%">
         <h2 style="text-align:center;font-size:45px;color:indianred;"><span class="glyphicon glyphicon-list-alt"></span></h2>
         <h2 style="text-align:center;font-size:20px">Test</h2>
-        @*<p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
-            </p>
-            <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>*@
+        <p style="text-align:justify">
+                Issue a test easily for the students to asnswer. Our Editor
+                is easy to use and learn for the Professors.
+        </p>
+            
     </div>
     <div class="col-md-2" style="width:25%">
         <h2 style="text-align:center;font-size:45px;color:indianred;"><span class="glyphicon glyphicon-ok"></span></h2>
         <h2 style="text-align:center;font-size:20px">Scores</h2>
-        @*<p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-            <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>*@
+        <p style="text-align:justify">
+                Test are scored automatically after you finish your test. Results 
+                can be viewed by the student themselves.
+        </p>
     </div>
     <div class="col-md-3" style="width:25%">
         <h2 style="text-align:center;font-size:45px;color:indianred;"><span class="glyphicon glyphicon-pushpin"></span></h2>
         <h2 style="text-align:center;font-size:20px">Notifications</h2>
-        @*<p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>*@
+        <p style="text-align:justify">
+                Get Notifications for the upcomming test or announcements by your professor</p>
     </div>
     <div class="col-md-4" style="width:25%">
         <h2 style="text-align:center;font-size:45px;color:indianred;"><span class="glyphicon glyphicon-info-sign"></span></h2>
         <h2 style="text-align:center;font-size:20px">Information</h2>
-        @*<p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>*@
+        <p style="text-align:center"> 
+                Learn more about us.</p>
     </div>
 </div>
+
+<div class="col-md-12" style="margin-top:35px;">
+</div>
+
+<div class="row">
+<div>
+    <h2 style="text-align:center;font-size:70px;color:indianred;"><span class="glyphicon glyphicon-phone"></span></h2>
+    <p style="text-align:center;font-size:20px;">Overview</p>
+</div>
+
+<div>
+    <div class="col-md-6">
+        <h1 style="text-align:center">About RCTS</h1>
+        <p style="text-align:justify;margin-top:10px">The ClassMarker hosted Online Testing software is the best Quiz maker for teachers & businesses. 
+        Used for business & training Tests; recruitment & pre-employment assessments; educational 
+        facilities, schools, universities, distance learning, online courses, E-Learning, self-study groups,
+        practice Tests & more.</p>
+
+        <p style="text-align:justify;margin-top:20px">RCTS Testing services allow you to easily create & give secure online Exams to your
+        exact requirements with features such as time limits, public & private Test access,
+        randomize Questions, instant feedback, multiple choice, short answer, essay & more Question types.</p>
+    </div>
+
+    <div class="col-md-6">
+        <h1 style="text-align:center">View Examples</h1>
+        <p style="text-align:center">Check out screenshots</p>
+        <p style="text-align:center">Try our Sample Online Test</p>
+        <p style="text-align:center">Check out screenshots</p>
+        <p style="text-align:center">Join</p>
+    </div>
+</div>
+</div>
+
+<div class="col-md-12" style="margin-top:35px;">
+</div>
+
+
+<div class="row">
+    <h2 style="text-align:center;font-size:70px;color:indianred;"><span class="glyphicon glyphicon-user"></span></h2>
+    <h2 style="text-align:center">What our customers say</h2>
+    <div id="myCarousel" class="carousel slide text-center" data-ride="carousel" style="height:60px">
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <h4 style="color:white">"This company is the best. I am so happy with the result!"<br><span style="font-style:normal;color:white">Michael Roe, Vice President, Comment Box</span></h4>
+            </div>
+            <div class="item">
+                <h4 style="color:white">"One word... WOW!!"<br><span style="font-style:normal;color:white">John Doe, Salesman, Rep Inc</span></h4>
+            </div>
+            <div class="item">
+                <h4 style="color:white">"Could I... BE any more happy with this company?"<br><span style="font-style:normal;color:white">Chandler Bing, Actor, FriendsAlot</span></h4>
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" style="color:white">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next" style="color:white">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+<div class="col-md-12" style="margin-top:35px;">
+</div>
+
