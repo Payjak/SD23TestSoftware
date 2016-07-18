@@ -19,6 +19,9 @@ namespace SDQuizMaker.Models
         [Key]
         [StringLength(10)]
         public string UserID { get; set; }
+
+        public string ClassID { get; set; }
+
         public string ProfilePic { get; set; }
         [Required]
         [StringLength(80)]
@@ -36,5 +39,7 @@ namespace SDQuizMaker.Models
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tbresponse> tbresponses { get; set; }
+
+        public virtual tbintake tbintake { get; set; }
     }
 }

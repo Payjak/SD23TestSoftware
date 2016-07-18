@@ -17,6 +17,9 @@
             UserID
         </th>
         <th>
+            ClassID
+        </th>
+        <th>
             ProfilePic
         </th>
         <th>
@@ -35,6 +38,9 @@
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.UserID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClassID)
         </td>
         @if ((string)Session["ProfilePic"] != null)
         {

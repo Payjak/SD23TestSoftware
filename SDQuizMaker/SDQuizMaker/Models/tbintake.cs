@@ -24,6 +24,9 @@ namespace SDQuizMaker.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tbinstance> tbinstances { get; set; }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tbuser> tbuser { get; set; }
+
         public virtual tbprogram tbprogram { get; set; }
     }
 }

@@ -21,6 +21,7 @@ namespace SDQuizMaker.Controllers
             { return RedirectToAction("Index", "Home"); }
             var amntofusers = db.tbusers.ToList().Count();
             Session["amntofusers"] = amntofusers + 1;
+            ViewBag.ClassID = new SelectList(db.tbintakes, "ClassID", "ClassID");
             return View(db.tbusers.ToList());
         }
 
@@ -32,6 +33,7 @@ namespace SDQuizMaker.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.ClassID = new SelectList(db.tbintakes, "ClassID", "ClassID");
             return View(tbuser);
         }
 
@@ -49,6 +51,7 @@ namespace SDQuizMaker.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.ClassID = new SelectList(db.tbintakes, "ClassID", "ClassID");
             return View(tbuser);
         }
 
@@ -57,6 +60,7 @@ namespace SDQuizMaker.Controllers
         {
             if ((string)Session["Accesslevel"] != "Admin")
             { return RedirectToAction("Index", "Home"); }
+            ViewBag.ClassID = new SelectList(db.tbintakes, "ClassID", "ClassID");
             return View();
         }
 
@@ -65,7 +69,7 @@ namespace SDQuizMaker.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "UserID,ProfilePic,Email,Password,AccessLevel")] tbuser tbuser)
+        public ActionResult Create([Bind(Include = "UserID,ClassID,ProfilePic,Email,Password,AccessLevel")] tbuser tbuser)
         {
             if ((string)Session["Accesslevel"] != "Admin")
             { return RedirectToAction("Index", "Home"); }
@@ -93,6 +97,7 @@ namespace SDQuizMaker.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.ClassID = new SelectList(db.tbintakes, "ClassID", "ClassID");
             return View(tbuser);
         }
 
@@ -101,7 +106,7 @@ namespace SDQuizMaker.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "UserID,ProfilePic,Email,Password,AccessLevel")] tbuser tbuser)
+        public ActionResult Edit([Bind(Include = "UserID,ClassID,ProfilePic,Email,Password,AccessLevel")] tbuser tbuser)
         {
             if ((string)Session["Accesslevel"] != "Admin")
             { return RedirectToAction("Index", "Home"); }
@@ -128,6 +133,7 @@ namespace SDQuizMaker.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.ClassID = new SelectList(db.tbintakes, "ClassID", "ClassID");
             return View(tbuser);
         }
 
