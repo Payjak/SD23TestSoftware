@@ -134,6 +134,7 @@
     <Compile Include="Controllers\IntakeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ProgramController.cs" />
+    <Compile Include="Controllers\StudentQuizController.cs" />
     <Compile Include="Controllers\TAnswerController.cs" />
     <Compile Include="Controllers\tbianswersController.cs" />
     <Compile Include="Controllers\tbinstancesController.cs" />
@@ -300,6 +301,7 @@
     <Content Include="Views\tbresponses\Index.cshtml" />
     <Content Include="Views\TAnswer\GetAnswersIndex.cshtml" />
     <Content Include="Views\TQuestion\BackToIndex.cshtml" />
+    <Content Include="Views\StudentQuiz\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
