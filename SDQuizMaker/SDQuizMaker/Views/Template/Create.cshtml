@@ -5,7 +5,16 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Create</h2>
+<style>
+    .Create{
+        margin-top: 60px;
+        margin-left: 85px;
+        font-weight:bolder;
+        color:firebrick;
+    }
+</style>
+
+<h2 class="Create">Quiz Name</h2>
 
 
 @using (Html.BeginForm()) 
@@ -13,7 +22,6 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>tbtemplate</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">

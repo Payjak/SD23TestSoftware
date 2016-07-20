@@ -6,15 +6,22 @@
     var users = Session["amntofusers"];
 }
 
-<h2>Create @users</h2>
+<style>
+    .Create{
+        margin-top: 50px;
+        margin-left: 85px;
+        font-weight:bolder;
+        color:firebrick;
+    }
+</style>
 
+<h2 class="Create">Create a New User @*@users*@</h2>
 
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>tbuser</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div style="display:none" class="form-group">

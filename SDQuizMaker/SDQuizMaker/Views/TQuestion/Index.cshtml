@@ -5,14 +5,35 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Template Questions</h2>
+<style>
+    .Title{
+        text-align:center;
+        font-size:xx-large;
+        font-weight:bolder;
+        margin-top: 50px;
+        color:firebrick;
+    }
+    .Button{
+        margin-left: 390px;
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+    .Button2{
+        margin-left: 600px;
+        margin-top: -59px;
+        margin-bottom: 25px;
+    }
+</style>
 
-<p>
+<h2 class="Title">Template Questions</h2>
+
+<p class="Button">
     @Html.ActionLink("Create New Question", "Create", null,
-    new { @style = "color:black;", @class = "btn btn-default btn-sml" })
-
+    new { @style = "color:white;background-color:red;font-weight:bolder;", @class = "btn btn-default btn-sml" })
+</p>
+<p class="Button2">
     @Html.ActionLink("Back to Templates", "Index", "Template", null,
-    new { @style = "color:black;", @class = "btn btn-default btn-sml" })
+    new { @style = "color:white;background-color:red;font-weight:bolder;", @class = "btn btn-default btn-sml" })
 </p>
 <table class="table">
     <tr>
