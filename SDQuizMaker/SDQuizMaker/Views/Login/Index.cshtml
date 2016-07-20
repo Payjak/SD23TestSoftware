@@ -7,29 +7,29 @@
 
 <style>
     .loginbox {
-        height: 200px;
+        height: 185px;
         width: 400px;
         padding: 10px;
-        margin-top: 100px;
+        margin-top: 50px;
         margin-left: auto;
         margin-right: auto;
         box-shadow: 0px 3px 13px -4px;
     }
 
     .emailLbl {
-        margin-top: 20px;
+        margin-top: 15px;
         margin-left: 20px;
     }
 
     .passwordLbl {
-        margin-top: 20px;
+        margin-top: 15px;
         margin-left: 20px;
     }
 
     .button {
         align-content: center;
         text-align: center;
-        margin-top: 15px;
+        margin-top: 10px;
     }
 
     .buttonc {
@@ -37,7 +37,7 @@
         border: none;
         color: #ffffff;
         font-size: 15px;
-        padding: 5px 10px 5px 10px;
+        padding: 4px 7px 4px 7px;
         border: thin #b33b3b 1px;
         text-decoration: none;
     }
@@ -55,11 +55,12 @@
     }
 
     .txtBox {
-        margin-top: 15px;
+        margin-top: 10px;
     }
 </style>
 @using (Html.BeginForm())
 {
+    @Html.Raw(TempData["msg"])
     <div class="loginbox">
         <table>
             <tr>
@@ -97,6 +98,11 @@
             <tr>
                 <td colspan="2">
                     <div class="button"><input type="submit" class="buttonc" value="Login" /></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.ActionLink("Forgot Password?", "ForgotPassword", "Login")
                 </td>
             </tr>
         </table>
