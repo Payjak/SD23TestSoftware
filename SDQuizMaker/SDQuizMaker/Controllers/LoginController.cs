@@ -37,6 +37,7 @@ namespace SDQuizMaker.Controllers
                 Session["Email"] = us.Email;
                 Session["AccessLevel"] = us.AccessLevel;
                 Session["UserID"] = us.UserID;
+                Session["ClassID"] = us.ClassID; 
                 return RedirectToAction("Index", "Home");
             }
             else if (us.AccessLevel == "Mentor")
