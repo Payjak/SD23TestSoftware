@@ -113,7 +113,7 @@ namespace SDQuizMaker.Controllers
             {
                 db.Entry(tbtquestion).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("BackToIndex");
             }
             ViewBag.TemplateID = new SelectList(db.tbtemplates, "TemplateID", "Name", tbtquestion.TemplateID);
             return View(tbtquestion);
