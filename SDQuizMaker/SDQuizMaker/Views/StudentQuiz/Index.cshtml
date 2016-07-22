@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<SDQuizMaker.Models.tbinstance>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -6,3 +6,40 @@
 
 <h2>Index</h2>
 
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TemplateID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tbintake.ClassID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StartTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EndTime)
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TemplateID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tbintake.ClassID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StartTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EndTime)
+        </td>
+        <td>
+            @Html.ActionLink("Take Test", "#", "#")
+        </td>
+    </tr>
+    }
+
+</table>

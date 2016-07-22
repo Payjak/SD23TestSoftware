@@ -88,7 +88,14 @@ namespace SDQuizMaker.Controllers
                 Session["Email"] = us.Email;
                 Session["AccessLevel"] = us.AccessLevel;
                 Session["UserID"] = us.UserID;
-                Session["ClassID"] = us.ClassID; 
+                Session["ClassID"] = us.ClassID;
+
+                var classid = (string)Session["ClassID"];
+                var quiz = db.tbinstances.Where(t => t.ClassID == classid);
+                var chk = quiz.ToList().Count();
+                Session["chk"] = chk; 
+
+
                 return RedirectToAction("Index", "Home");
             }
             else if (us.AccessLevel == "Mentor")
@@ -101,6 +108,7 @@ namespace SDQuizMaker.Controllers
             }
             else if (us.AccessLevel == "Admin")
             {
+                Session["ClassID"] = us.ClassID;
                 Session["ProfilePic"] = us.ProfilePic;
                 Session["Email"] = us.Email;
                 Session["AccessLevel"] = us.AccessLevel;

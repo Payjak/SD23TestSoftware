@@ -7,6 +7,9 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+@{
+
+}
 </head>
 <body>
     <style>
@@ -72,6 +75,11 @@
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Login","Index","Login")</li>
+                    }
+                    @if (Session["chk"] != null)
+                    {
+                    var chk = (int)Session["chk"];
+                    <li class=""style="color:black;font-family:Impact">Quiz:@chk</li>
                     }
                 </ul>
             </div>
