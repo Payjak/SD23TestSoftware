@@ -16,12 +16,12 @@ namespace SDQuizMaker.Controllers
         // GET: StudentQuiz
         public ActionResult Index()
         {
+
             var classid = (string)Session["ClassID"];
-            var quiz = db.tbinstances.Where(t => t.ClassID == classid);
-            
+            var quiz = db.tbinstances.Include(i => i.tbintake).Where(t => t.ClassID == classid);
             if (quiz != null)
             {
-                return View();
+                return View(quiz.ToList());
             }
             return RedirectToAction("Index", "Home");
         }
