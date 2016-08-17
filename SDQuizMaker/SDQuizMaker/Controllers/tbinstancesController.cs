@@ -49,7 +49,7 @@ namespace SDQuizMaker
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "InstanceID,StartTime,EndTime,UserID,ClassID,TemplateID")] tbinstance tbinstance)
+        public ActionResult Create([Bind(Include = "InstanceID,StartTime,EndTime,ClassID,TemplateID")] tbinstance tbinstance)
         {
             if (ModelState.IsValid)
             {
@@ -84,7 +84,7 @@ namespace SDQuizMaker
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "InstanceID,StartTime,EndTime,UserID,ClassID")] tbinstance tbinstance)
+        public ActionResult Edit([Bind(Include = "InstanceID,StartTime,EndTime,ClassID")] tbinstance tbinstance)
         {
             if (ModelState.IsValid)
             {

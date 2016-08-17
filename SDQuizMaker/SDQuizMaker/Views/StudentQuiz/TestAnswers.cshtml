@@ -1,0 +1,53 @@
+﻿@model IEnumerable<SDQuizMaker.Models.tbtanswer>
+    @{
+    ViewBag.Title = "TestAnswers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int i = 1;
+    }
+    @*<script>
+        $(document).ready(function () {
+            $('tr').click(function () {
+                //Check to see if background color is set or if it's set to white.
+                if (this.style.background == "" || this.style.background == "white") {
+                    $(this).css('background', 'red');
+                }
+                else {
+                    $(this).css('background', 'white');
+                }
+            });
+        });
+    </script>
+    <script>
+        function changeColor(o) {
+            o.style.backgroundColor = (o.style.backgroundColor == 'green') ? ('transparent') : ('green');
+        }
+    </script>*@
+<style>
+    tr:hover td {
+        background-color: green ;
+    }
+</style>
+    <h2>TestAnswers</h2>
+    <table class="table">
+        <tr>
+            <th></th>
+            <th>
+                Answers
+            </th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model.Take(1)) {
+        <tr onclick="changeColor(this)">
+            <td>
+                @i.
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Text)
+            </td>
+            <td>
+                @Html.ActionLink("Choose","TestAnswers","StudentQuiz", new { id=item.TAnswerID }, null)
+            </td>
+        </tr>
+        i++;
+        }
+    </table>

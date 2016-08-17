@@ -39,8 +39,8 @@ namespace SDQuizMaker
         // GET: tbresponses/Create
         public ActionResult Create()
         {
-            ViewBag.InstanceID = new SelectList(db.tbinstances, "InstanceID", "UserID");
-            ViewBag.UserID = new SelectList(db.tbusers, "UserID", "Email");
+            ViewBag.InstanceID = new SelectList(db.tbinstances, "InstanceID", "InstanceID");
+            ViewBag.UserID = new SelectList(db.tbusers, "UserID", "UserID");
             return View();
         }
 
