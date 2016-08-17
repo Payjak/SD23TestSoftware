@@ -5,11 +5,26 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<style>
+    .Title{
+        text-align:center;
+        font-size:xx-large;
+        font-weight:bolder;
+        margin-top: 50px;
+        color:firebrick;
+    }
+    .Button{
+        margin-left: 507px;
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+</style>
 
-<p>
-    @Html.ActionLink("Create New", "Create", null,
-    new { @style = "color:black;", @class = "btn btn-default btn-sml" })
+<h2 class="Title">Issued Quizzes</h2>
+
+<p class="Button">
+    @Html.ActionLink("Issue New Quiz", "Create", null,
+    new { @style = "color:white;background-color:red;font-weight:bolder;", @class = "btn btn-default btn-sml" })
 </p>
 <table class="table">
     <tr>
