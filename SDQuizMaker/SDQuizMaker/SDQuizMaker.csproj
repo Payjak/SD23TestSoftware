@@ -303,6 +303,8 @@
     <Content Include="Views\TQuestion\BackToIndex.cshtml" />
     <Content Include="Views\StudentQuiz\Index.cshtml" />
     <Content Include="Views\Login\ForgotPassword.cshtml" />
+    <Content Include="Views\StudentQuiz\TakingTest.cshtml" />
+    <Content Include="Views\StudentQuiz\TestAnswers.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

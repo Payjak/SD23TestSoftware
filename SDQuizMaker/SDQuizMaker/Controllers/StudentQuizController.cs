@@ -25,5 +25,27 @@ namespace SDQuizMaker.Controllers
             }
             return RedirectToAction("Index", "Home");
         }
+
+        public ActionResult TakingTest()
+        {
+            Random random = new Random();
+            Session["choosetestid"] = (string)HttpContext.Request.RequestContext.RouteData.Values["id"];
+            var choosetestid = Session["choosetestid"];
+            var questions = db.tbtquestions.Include(t => t.tbtemplate);
+            int templateid = int.Parse(choosetestid.ToString());
+            var temp = db.tbtemplates.FirstOrDefault(t => t.TemplateID == templateid);
+            Session["tempname"] = temp.Name;
+            return View(questions.ToList().Where(t => t.TemplateID == Convert.ToInt32(choosetestid)).OrderBy(r => random.Next()));
+        }
+
+
+        public ActionResult TestAnswers()
+        {
+            Random random = new Random();
+            Session["choosequestionid"] = (string)HttpContext.Request.RequestContext.RouteData.Values["id"];
+            var chooseq = Session["choosequestionid"];
+            var answers = db.tbtanswers.Include(q => q.tbtquestion);
+            return View(answers.ToList().Where(q => q.TQuestionID == Convert.ToInt32(chooseq)).OrderBy(r => random.Next()));
+        }
     }
 }

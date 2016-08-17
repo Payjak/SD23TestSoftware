@@ -17,6 +17,7 @@ namespace SDQuizMaker
         // GET: tbiquestions
         public ActionResult Index()
         {
+
             var tbiquestions = db.tbiquestions.Include(t => t.tbinstance);
             return View(tbiquestions.ToList());
         }
@@ -39,7 +40,7 @@ namespace SDQuizMaker
         // GET: tbiquestions/Create
         public ActionResult Create()
         {
-            ViewBag.InstanceID = new SelectList(db.tbinstances, "InstanceID", "UserID");
+            ViewBag.InstanceID = new SelectList(db.tbinstances, "InstanceID", "ClassID");
             return View();
         }
 
@@ -57,7 +58,7 @@ namespace SDQuizMaker
                 return RedirectToAction("Index");
             }
 
-            ViewBag.InstanceID = new SelectList(db.tbinstances, "InstanceID", "UserID", tbiquestion.InstanceID);
+            ViewBag.InstanceID = new SelectList(db.tbinstances, "InstanceID", "ClassID", tbiquestion.InstanceID);
             return View(tbiquestion);
         }
 
@@ -73,7 +74,7 @@ namespace SDQuizMaker
             {
                 return HttpNotFound();
             }
-            ViewBag.InstanceID = new SelectList(db.tbinstances, "InstanceID", "UserID", tbiquestion.InstanceID);
+            ViewBag.InstanceID = new SelectList(db.tbinstances, "InstanceID", "ClassID", tbiquestion.InstanceID);
             return View(tbiquestion);
         }
 
@@ -90,7 +91,7 @@ namespace SDQuizMaker
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.InstanceID = new SelectList(db.tbinstances, "InstanceID", "UserID", tbiquestion.InstanceID);
+            ViewBag.InstanceID = new SelectList(db.tbinstances, "InstanceID", "ClassID", tbiquestion.InstanceID);
             return View(tbiquestion);
         }
 

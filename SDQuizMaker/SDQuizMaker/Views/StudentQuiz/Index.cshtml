@@ -37,7 +37,7 @@
             @Html.DisplayFor(modelItem => item.EndTime)
         </td>
         <td>
-            @Html.ActionLink("Take Test", "#", "#")
+            @Html.ActionLink("Take Test", "TakingTest", "StudentQuiz", new { id=item.TemplateID },null)
         </td>
     </tr>
     }
