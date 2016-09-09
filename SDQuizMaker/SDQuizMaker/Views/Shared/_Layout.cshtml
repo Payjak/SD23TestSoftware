@@ -21,6 +21,22 @@
             width: 190px;
         }
     </style>
+    <style type="text/css">
+        .effectscale {
+            border: none;
+            margin: 0 auto;
+        }
+
+            .effectscale:hover {
+                -webkit-transform: scale(1.4);
+                -moz-transform: scale(1.4);
+                -o-transform: scale(1.4);
+                transform: scale(1.4);
+                transition: all 0.3s;
+                -webkit-transition: all 0.3s;
+            }
+    </style>
+
     <div class="navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -42,44 +58,47 @@
                     @if ((string)Session["Accesslevel"] == "Admin")
                     {
                     <li class="hidden-lg">@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Profile","Profile","User")</li>
-                    <li>@Html.ActionLink("Logout","Logout","Login")</li>
-                    <li>@Html.ActionLink("Quiz Create", "Index", "Template")</li>
+                    <li class="effectscale">@Html.ActionLink("Profile","Profile","User")</li>
+                    <li class="effectscale">@Html.ActionLink("Logout","Logout","Login")</li>
+                    <li class="effectscale">@Html.ActionLink("Quiz Create", "Index", "Template")</li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                             Admin
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu pull-right">                          
-                            <li>@Html.ActionLink("Intakes","Index","Intake")</li>
-                            <li>@Html.ActionLink("Users","Index","User")</li>
-                            <li>@Html.ActionLink("Programs","Index","Program")</li>
-                            <li>@Html.ActionLink("Issue Quiz","Index","tbinstances")</li>
-                            <li>@Html.ActionLink("IAnswer","Index","tbianswers")</li>
-                            <li>@Html.ActionLink("IQuestion","Index","tbiquestions")</li>
-                            <li>@Html.ActionLink("Response","Index","tbresponses")</li>
-                            <li>@Html.ActionLink("ResponseDetail","Index","tbresponsedetails")</li>
+                            <li class="effectscale">@Html.ActionLink("Intakes","Index","Intake")</li>
+                            <li class="effectscale">@Html.ActionLink("Users","Index","User")</li>
+                            <li class="effectscale">@Html.ActionLink("Programs","Index","Program")</li>
+                            <li class="effectscale">@Html.ActionLink("Issue Quiz","Index","tbinstances")</li>
+                            <li class="effectscale">@Html.ActionLink("IAnswer","Index","tbianswers")</li>
+                            <li class="effectscale">@Html.ActionLink("IQuestion","Index","tbiquestions")</li>
+                            <li class="effectscale">@Html.ActionLink("Response","Index","tbresponses")</li>
+                            <li class="effectscale">@Html.ActionLink("ResponseDetail","Index","tbresponsedetails")</li>
                         </ul>
                     </li>
                     }
                     else if ((string)Session["AccessLevel"] == "Student")
                     {
-                        <li class="hidden-lg">@Html.ActionLink("Home", "Index", "Home")</li>
-                        <li>@Html.ActionLink("Profile", "Profile", "User")</li>
-                        <li>@Html.ActionLink("Logout","Logout","Login")</li>
-                        <li>@Html.ActionLink("Take the Quiz", "Index", "StudentQuiz")</li>
+                        <li class="hidden-lg effectscale">@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li class="effectscale">@Html.ActionLink("Profile", "Profile", "User")</li>
+                        <li class="effectscale">@Html.ActionLink("Logout","Logout","Login")</li>
                     }
                     else
                     {
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Login","Index","Login")</li>
+                    <li class="effectscale">@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li class="effectscale">@Html.ActionLink("About", "About", "Home")</li>
+                    <li class="effectscale">@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li class="effectscale">@Html.ActionLink("Login","Index","Login")</li>
                     }
                     @if (Session["chk"] != null)
                     {
                     var chk = (int)Session["chk"];
-                    <li class=""style="color:black;font-family:Impact">Quiz:@chk</li>
+                    <li><a href="/StudentQuiz"><span style="color:red;font-size:15px" class="glyphicon glyphicon-asterisk"></span><span style="font-size:14px">(@chk)</span></a></li>
+                    }
+                    else if (Session["chk"] == null && Session["AccessLevel"] != null)
+                    {
+                    <li><a href="/StudentQuiz"><span style="color:gray;font-size:15px" class="glyphicon glyphicon-asterisk"></span></a></li>
                     }
                 </ul>
             </div>
@@ -89,7 +108,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - SD23 Test Software</p>
         </footer>
     </div>
 

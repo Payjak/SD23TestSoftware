@@ -104,6 +104,12 @@ namespace SDQuizMaker.Controllers
                 Session["Email"] = us.Email;
                 Session["AccessLevel"] = us.AccessLevel;
                 Session["UserID"] = us.UserID;
+
+                var classid = (string)Session["ClassID"];
+                var quiz = db.tbinstances.Where(t => t.ClassID == classid);
+                var chk = quiz.ToList().Count();
+                Session["chk"] = chk;
+
                 return RedirectToAction("Index", "Home");
             }
             else if (us.AccessLevel == "Admin")
@@ -113,6 +119,12 @@ namespace SDQuizMaker.Controllers
                 Session["Email"] = us.Email;
                 Session["AccessLevel"] = us.AccessLevel;
                 Session["UserID"] = us.UserID;
+
+                var classid = (string)Session["ClassID"];
+                var quiz = db.tbinstances.Where(t => t.ClassID == classid);
+                var chk = quiz.ToList().Count();
+                Session["chk"] = chk;
+
                 return RedirectToAction("Index", "Home");
             }
             return View();
